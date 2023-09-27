@@ -43,3 +43,12 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #222; /* Color of the scroll thumb on hover */
 }
+
+@media (max-width: 640px) {
+  /* This width corresponds to the TailwindCSS breakpoint for medium (md) screens */
+  body,
+  html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+  }
+}

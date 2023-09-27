@@ -50,7 +50,7 @@ export default function HomePage() {
   }
 
   return (
-    <main className='flex h-screen flex-row items-center justify-between gap-12 p-10 text-sm overflow-hidden'>
+    <main className='flex h-screen flex-row items-center justify-between gap-12 md:p-10 p-4 text-sm overflow-hidden relative'>
       <div className='flex flex-col h-full w-[60%] justify-end'>
         {/* HEADER */}
         <div className='mb-8'>
@@ -132,19 +132,28 @@ export default function HomePage() {
 
         {/* FOOTER */}
         {showMenu && (
-          <div className='w-full flex flex-col'>
-            <div className='text-gray-700'>
-              Website made using NextJS/Typescipt/Tailwind
-            </div>
-            <div className='text-gray-700 lg:flex hidden'>
-              Animation made in Blender
-            </div>
+          <div className='w-full flex flex-col md:text-gray-700 text-white'>
+            <div className=''>Website made using NextJS/Typescipt/Tailwind</div>
+            <div className='lg:flex hidden'>Animation made in Blender</div>
           </div>
         )}
       </div>
 
       {/* VIDEO */}
-      <div className='md:w-[80%] md:flex abolute '>
+      <div className='md:flex md:w-[80%] hidden'>
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className='w-full h-full object-cover'
+        >
+          <source src={Blocks} type='video/mp4' />
+        </video>
+      </div>
+      {/* VIDEO MOBILE */}
+      <div className='md:hidden absolute w-[200%] bottom-[-350px] right-[-500px] -z-40'>
         <video
           ref={videoRef}
           autoPlay
