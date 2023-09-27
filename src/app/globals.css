@@ -8,6 +8,13 @@
   }
 }
 
+/* Styles for dark mode */
+@media (prefers-color-scheme: dark) {
+  .text-gray-300 {
+    color: [desired color for dark mode];
+  }
+}
+
 /* Style the scrollbar across the project */
 ::-webkit-scrollbar {
   width: 3px; /* Adjust width of scrollbar */
