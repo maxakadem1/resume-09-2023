@@ -27,7 +27,7 @@ const ContactMeContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             href='https://www.linkedin.com/in/abdulkhalikov/'
             target='_blank'
             rel='noopener noreferrer'
-            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit'
+            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit transform transition-transform duration-300 ease-in-out hover:translate-x-3'
           >
             <h1 className=''>Email</h1>
             <FiArrowUpRight className='ml-1' size={17} />
@@ -36,7 +36,7 @@ const ContactMeContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             href='https://www.linkedin.com/in/abdulkhalikov/'
             target='_blank'
             rel='noopener noreferrer'
-            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit'
+            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit transform transition-transform duration-300 ease-in-out hover:translate-x-3'
           >
             <h1 className=''>LinkedIn</h1>
             <FiArrowUpRight className='ml-1' size={17} />
@@ -45,7 +45,7 @@ const ContactMeContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             href='https://github.com/maxakadem1'
             target='_blank'
             rel='noopener noreferrer'
-            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit'
+            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit transform transition-transform duration-300 ease-in-out hover:translate-x-3'
           >
             <h1 className=''>GitHub</h1>
             <FiArrowUpRight className='ml-1' size={17} />

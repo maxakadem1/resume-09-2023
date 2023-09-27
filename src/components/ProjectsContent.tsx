@@ -30,7 +30,7 @@ const ProjectsContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             href='/projects/musica'
             target='_blank'
             rel='noopener noreferrer'
-            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit'
+            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit transform transition-transform duration-300 ease-in-out hover:translate-x-3'
           >
             <h1 className=''>Musica</h1>
             <FiArrowUpRight className='ml-1' size={17} />
@@ -39,7 +39,7 @@ const ProjectsContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             href='/projects/devclub'
             target='_blank'
             rel='noopener noreferrer'
-            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit'
+            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit transform transition-transform duration-300 ease-in-out hover:translate-x-3'
           >
             <h1 className=''>UofM .DevClub</h1>
             <FiArrowUpRight className='ml-1' size={17} />
@@ -48,7 +48,7 @@ const ProjectsContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             href='/projects/musicAnimals'
             target='_blank'
             rel='noopener noreferrer'
-            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit'
+            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit transform transition-transform duration-300 ease-in-out hover:translate-x-3'
           >
             <h1 className=''>Music Animals</h1>
             <FiArrowUpRight className='ml-1' size={17} />
@@ -57,7 +57,7 @@ const ProjectsContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             href='/projects/artwork'
             target='_blank'
             rel='noopener noreferrer'
-            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit'
+            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit transform transition-transform duration-300 ease-in-out hover:translate-x-3'
           >
             <h1 className=''>Personal Artwork</h1>
             <FiArrowUpRight className='ml-1' size={17} />

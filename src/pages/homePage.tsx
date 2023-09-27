@@ -67,7 +67,7 @@ export default function HomePage() {
             {showMenu && (
               <div className='flex flex-col gap-2'>
                 <button
-                  className='text-gray-500 hover:text-white w-fit'
+                  className='text-gray-500 hover:text-white w-fit transform transition-transform duration-300 ease-in-out hover:translate-x-3'
                   onClick={() => {
                     setShowMenu(false)
                     changeContent('experience')
@@ -79,13 +79,13 @@ export default function HomePage() {
                   href='/resume'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit'
+                  className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit transform transition-transform duration-300 ease-in-out hover:translate-x-3'
                 >
                   <h1 className=''>Resume</h1>
                   <FiArrowUpRight className='ml-1' size={17} />
                 </Link>
                 <button
-                  className='text-gray-500 hover:text-white w-fit'
+                  className='text-gray-500 hover:text-white w-fit transform transition-transform duration-300 ease-in-out hover:translate-x-3'
                   onClick={() => {
                     setShowMenu(false)
                     changeContent('projects')
@@ -94,7 +94,7 @@ export default function HomePage() {
                   Projects
                 </button>
                 <button
-                  className='text-gray-500 hover:text-white w-fit'
+                  className='text-gray-500 hover:text-white w-fit transform transition-transform duration-300 ease-in-out hover:translate-x-3'
                   onClick={() => {
                     setShowMenu(false)
                     changeContent('aboutme')
@@ -103,7 +103,7 @@ export default function HomePage() {
                   About Me
                 </button>
                 <button
-                  className='text-gray-500 hover:text-white w-fit'
+                  className='text-gray-500 hover:text-white w-fit transform transition-transform duration-300 ease-in-out hover:translate-x-3'
                   onClick={() => {
                     setShowMenu(false)
                     changeContent('contactme')
