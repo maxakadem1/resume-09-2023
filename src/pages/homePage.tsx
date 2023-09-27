@@ -144,7 +144,7 @@ export default function HomePage() {
       </div>
 
       {/* VIDEO */}
-      <div className='w-[40%] lg:flex hidden'>
+      <div className='md:w-[80%] md:flex abolute '>
         <video
           ref={videoRef}
           autoPlay
