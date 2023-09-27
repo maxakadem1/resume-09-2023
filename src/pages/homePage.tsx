@@ -1,18 +1,25 @@
 'use client'
 
 //libraries
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useSpring, animated, config } from '@react-spring/web'
+import Link from 'next/link'
+import '../app/globals.css'
 // components
 import ResumeContent from '@/components/ResumeContent'
 import ExperienceContent from '@/components/ExperienceContent'
 import ProjectsContent from '@/components/ProjectsContent'
 import AboutMeContent from '@/components/AboutMeContent'
 import ContactMeContent from '@/components/ContactMeContent'
+// icons
+import { FiArrowUpRight } from 'react-icons/fi'
 
 export default function HomePage() {
   // ANIMATION IMPORT
   const Rings = '/Ring.mp4'
+  const Blocks = '/GlassBlocks2.mp4'
+
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   // SMOOTH TRANSITIONS
   const [showMenu, setShowMenu] = useState(true)
@@ -44,13 +51,13 @@ export default function HomePage() {
 
   return (
     <main className='flex h-screen flex-row items-center justify-between gap-12 p-10 text-sm overflow-hidden'>
-      <div className='flex flex-col h-full w-[50%] justify-end'>
+      <div className='flex flex-col h-full w-[60%] justify-end'>
         {/* HEADER */}
         <div className='mb-8'>
           <div className='text-gray-300'>Maxim Abdulkhalikov</div>
           <div className='text-gray-600'>Personal Website</div>
           <div className='text-gray-600'>
-            Working in Tech and Design from 2019
+            Working in Tech and Design from 2022
           </div>
         </div>
 
@@ -67,15 +74,15 @@ export default function HomePage() {
               >
                 Experience
               </button>
-              <button
-                className='text-gray-500 hover:text-white w-fit'
-                onClick={() => {
-                  setShowMenu(false)
-                  changeContent('resume')
-                }}
+              <Link
+                href='/resume'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit'
               >
-                Resume
-              </button>
+                <h1 className=''>Resume</h1>
+                <FiArrowUpRight className='ml-1' size={17} />
+              </Link>
               <button
                 className='text-gray-500 hover:text-white w-fit'
                 onClick={() => {
@@ -137,15 +144,16 @@ export default function HomePage() {
       </div>
 
       {/* VIDEO */}
-      <div className='w-[50%] lg:flex hidden'>
+      <div className='w-[40%] lg:flex hidden'>
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
           className='w-full h-full object-cover'
         >
-          <source src={Rings} type='video/mp4' />
+          <source src={Blocks} type='video/mp4' />
         </video>
       </div>
     </main>

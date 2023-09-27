@@ -25,3 +25,21 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* Style the scrollbar across the project */
+::-webkit-scrollbar {
+  width: 3px; /* Adjust width of scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* Color of the track/bar background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333; /* Color of the scroll thumb */
+  border-radius: 4px; /* Optional: Add border radius to make it round */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222; /* Color of the scroll thumb on hover */
+}
