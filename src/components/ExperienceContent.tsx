@@ -26,9 +26,13 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
         <div className='flex flex-col gap-20 overflow-y-auto p-4 relative'>
           {/* E1 */}
           <div>
-            <div className='text-gray-300 pb-2 text-lg'>
-              React Software Developer
+            <div className='flex flex-row gap-2 items-center'>
+              <div className='text-gray-300 pb-2 text-lg'>
+                React Software Developer
+              </div>
+              <div className='text-gray-500 pb-2 text-sm'>(2023-current)</div>
             </div>
+
             <Link
               href='https://outreachgenius.ai/'
               target='_blank'
@@ -70,8 +74,11 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
 
           {/* E2 */}
           <div>
-            <div className='text-gray-300 pb-2 text-lg'>
-              Full Stack React Developer (Co-op Alternative)
+            <div className='flex flex-row gap-2 items-center'>
+              <div className='text-gray-300 pb-2 text-lg'>
+                Full Stack React Developer (Co-op Alternative)
+              </div>
+              <div className='text-gray-500 pb-2 text-sm'>(2022)</div>
             </div>
             <Link
               href='https://github.com/University-of-Manitoba-Computer-Science/trackr'
@@ -96,7 +103,10 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
 
           {/* E3 */}
           <div>
-            <div className='text-gray-300 pb-2 text-lg'>UI/UX Designer</div>
+            <div className='flex flex-row gap-2 items-center'>
+              <div className='text-gray-300 pb-2 text-lg'>UI/UX Designer</div>
+              <div className='text-gray-500 pb-2 text-sm'>(2022)</div>
+            </div>
             <div className='text-gray-500 italic w-fit'>
               Freelance (Self employed) - See Projects from the Homepage{' '}
             </div>
