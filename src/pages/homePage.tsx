@@ -132,7 +132,7 @@ export default function HomePage() {
 
         {/* FOOTER */}
         {showMenu && (
-          <div className='w-full flex flex-col md:text-gray-700 text-white'>
+          <div className='w-full flex flex-col md:text-gray-700 text-white z-50'>
             <div className=''>Website made using NextJS/Typescipt/Tailwind</div>
             <div className='lg:flex hidden'>Animation made in Blender</div>
           </div>
@@ -153,7 +153,7 @@ export default function HomePage() {
         </video>
       </div>
       {/* VIDEO MOBILE */}
-      <div className='md:hidden absolute w-[200%] bottom-[-350px] right-[-500px] -z-40'>
+      <div className='md:hidden absolute w-[200%] bottom-[-350px] right-[-500px]'>
         <video
           ref={videoRef}
           autoPlay
