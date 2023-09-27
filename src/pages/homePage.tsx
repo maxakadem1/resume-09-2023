@@ -51,7 +51,7 @@ export default function HomePage() {
 
   return (
     <main className='flex h-screen flex-row items-center justify-between gap-12 md:p-10 p-4 text-sm overflow-hidden relative'>
-      <div className='flex flex-col h-full w-[60%] justify-end'>
+      <div className='flex flex-col h-full w-[60%] justify-end z-50'>
         {/* HEADER */}
         <div className='mb-8'>
           <div className='text-gray-300'>Maxim Abdulkhalikov</div>
