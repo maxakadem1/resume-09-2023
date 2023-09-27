@@ -50,93 +50,100 @@ export default function HomePage() {
   }
 
   return (
-    <main className='flex h-screen flex-row items-center justify-between gap-12 md:p-10 p-4 text-sm overflow-hidden relative'>
-      <div className='flex flex-col h-full w-[60%] justify-end z-50'>
-        {/* HEADER */}
-        <div className='mb-8'>
-          <div className='text-gray-300'>Maxim Abdulkhalikov</div>
-          <div className='text-gray-600'>Personal Website</div>
-          <div className='text-gray-600'>
-            Working in Tech and Design from 2022
+    <main className='flex h-screen flex-row items-center justify-between gap-12 md:p-10  text-sm overflow-hidden relative '>
+      <div className='md:backdrop-blur-none backdrop-blur-md z-50 p-4 h-full w-full'>
+        <div className='flex flex-col h-full md:w-[100%] w-full justify-end '>
+          {/* HEADER */}
+          <div className='mb-8'>
+            <div className='text-gray-300'>Maxim Abdulkhalikov</div>
+            <div className='text-gray-600'>Personal Website</div>
+            <div className='text-gray-600'>
+              Working in Tech and Design from 2022
+            </div>
           </div>
-        </div>
 
-        {/* BUTTONS */}
-        <animated.div className='w-full h-[100%] '>
+          {/* BUTTONS */}
+          <animated.div className='w-full h-[100%] '>
+            {showMenu && (
+              <div className='flex flex-col gap-2'>
+                <button
+                  className='text-gray-500 hover:text-white w-fit'
+                  onClick={() => {
+                    setShowMenu(false)
+                    changeContent('experience')
+                  }}
+                >
+                  Experience
+                </button>
+                <Link
+                  href='/resume'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit'
+                >
+                  <h1 className=''>Resume</h1>
+                  <FiArrowUpRight className='ml-1' size={17} />
+                </Link>
+                <button
+                  className='text-gray-500 hover:text-white w-fit'
+                  onClick={() => {
+                    setShowMenu(false)
+                    changeContent('projects')
+                  }}
+                >
+                  Projects
+                </button>
+                <button
+                  className='text-gray-500 hover:text-white w-fit'
+                  onClick={() => {
+                    setShowMenu(false)
+                    changeContent('aboutme')
+                  }}
+                >
+                  About Me
+                </button>
+                <button
+                  className='text-gray-500 hover:text-white w-fit'
+                  onClick={() => {
+                    setShowMenu(false)
+                    changeContent('contactme')
+                  }}
+                >
+                  Contact Me
+                </button>
+              </div>
+            )}
+            {/* CONTENT */}
+            {selectedContent === 'experience' && (
+              <ExperienceContent
+                resumeProps={transitionProps}
+                goBack={goBack}
+              />
+            )}
+            {selectedContent === 'resume' && (
+              <ResumeContent resumeProps={transitionProps} goBack={goBack} />
+            )}
+            {selectedContent === 'projects' && (
+              <ProjectsContent resumeProps={transitionProps} goBack={goBack} />
+            )}
+            {selectedContent === 'aboutme' && (
+              <AboutMeContent resumeProps={transitionProps} goBack={goBack} />
+            )}
+            {selectedContent === 'contactme' && (
+              <ContactMeContent resumeProps={transitionProps} goBack={goBack} />
+            )}
+          </animated.div>
+
+          {/* FOOTER */}
           {showMenu && (
-            <div className='flex flex-col gap-2'>
-              <button
-                className='text-gray-500 hover:text-white w-fit'
-                onClick={() => {
-                  setShowMenu(false)
-                  changeContent('experience')
-                }}
-              >
-                Experience
-              </button>
-              <Link
-                href='/resume'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit'
-              >
-                <h1 className=''>Resume</h1>
-                <FiArrowUpRight className='ml-1' size={17} />
-              </Link>
-              <button
-                className='text-gray-500 hover:text-white w-fit'
-                onClick={() => {
-                  setShowMenu(false)
-                  changeContent('projects')
-                }}
-              >
-                Projects
-              </button>
-              <button
-                className='text-gray-500 hover:text-white w-fit'
-                onClick={() => {
-                  setShowMenu(false)
-                  changeContent('aboutme')
-                }}
-              >
-                About Me
-              </button>
-              <button
-                className='text-gray-500 hover:text-white w-fit'
-                onClick={() => {
-                  setShowMenu(false)
-                  changeContent('contactme')
-                }}
-              >
-                Contact Me
-              </button>
+            <div className='w-full flex flex-col md:text-gray-700 text-white z-50'>
+              <div className=''>
+                Website made using NextJS/Typescipt/Tailwind
+              </div>
+              <div className='lg:flex hidden'>Animation made in Blender</div>
             </div>
           )}
-          {/* CONTENT */}
-          {selectedContent === 'experience' && (
-            <ExperienceContent resumeProps={transitionProps} goBack={goBack} />
-          )}
-          {selectedContent === 'resume' && (
-            <ResumeContent resumeProps={transitionProps} goBack={goBack} />
-          )}
-          {selectedContent === 'projects' && (
-            <ProjectsContent resumeProps={transitionProps} goBack={goBack} />
-          )}
-          {selectedContent === 'aboutme' && (
-            <AboutMeContent resumeProps={transitionProps} goBack={goBack} />
-          )}
-          {selectedContent === 'contactme' && (
-            <ContactMeContent resumeProps={transitionProps} goBack={goBack} />
-          )}
-        </animated.div>
-
-        {/* FOOTER */}
-        {showMenu && (
-          <div className='w-full flex flex-col md:text-gray-700 text-white z-50'>
-            <div className=''>Website made using NextJS/Typescipt/Tailwind</div>
-            <div className='lg:flex hidden'>Animation made in Blender</div>
-          </div>
-        )}
+        </div>
       </div>
 
       {/* VIDEO */}
@@ -152,6 +159,7 @@ export default function HomePage() {
           <source src={Blocks} type='video/mp4' />
         </video>
       </div>
+
       {/* VIDEO MOBILE */}
       <div className='md:hidden absolute w-[200%] bottom-[-350px] right-[-500px]'>
         <video

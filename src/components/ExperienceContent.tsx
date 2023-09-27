@@ -23,7 +23,7 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
           </button>
         </div>
 
-        <div className=' flex flex-col gap-20 overflow-y-auto p-4'>
+        <div className='flex flex-col gap-20 overflow-y-auto p-4'>
           {/* E1 */}
           <div>
             <div className='text-gray-300 pb-2 text-lg'>
