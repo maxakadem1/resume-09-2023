@@ -161,7 +161,7 @@ export default function HomePage() {
       </div>
 
       {/* VIDEO MOBILE */}
-      <div className='md:hidden absolute w-[200%] bottom-[-250px] right-[-400px]'>
+      <div className='md:hidden absolute w-[200%] top-[35%] right-[-120%]'>
         <video
           ref={videoRef}
           autoPlay
@@ -176,3 +176,4 @@ export default function HomePage() {
     </main>
   )
 }
+// bottom-[-250px] right-[-400px]
