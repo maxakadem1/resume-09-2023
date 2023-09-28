@@ -13,13 +13,13 @@ export default function ArtworkPage() {
   ]
 
   return (
-    <div className='h-screen flex flex-col'>
+    <div className='flex flex-col md:overflow-hidden overflow-visible'>
       <Head>
         <title>Max A - Art</title>
       </Head>
 
-      <main className='flex h-screen w-screen md:flex-row flex-col md:items-center items-start justify-between md:gap-12 gap-2 md:p-10 p-4 text-sm overflow-hidden bg-black'>
-        <div className='flex flex-col h-full w-[50%]'>
+      <main className='flex md:h-screen h-auto w-screen md:flex-row flex-col md:items-center items-start justify-between md:gap-12 gap-2 md:p-10 p-4 text-sm bg-black'>
+        <div className='flex flex-col h-full w-[50%] pb-4'>
           {/* HEADER */}
           <div className='mb-8 md:flex hidden flex-col'>
             <div className='text-gray-300'>Maxim Abdulkhalikov</div>
@@ -36,7 +36,7 @@ export default function ArtworkPage() {
             </Link>
           </div>
 
-          <div className='flex flex-col gap-4 overflow-y-auto relative pr-4 md:h-full h-[40vh] md:w-full w-[90vw]'>
+          <div className='flex flex-col gap-4 overflow-y-auto relative pr-4 md:h-full  md:w-full w-[90vw]'>
             <div className='text-gray-300 text-lg'>
               Here is the collection of my most recent work.
             </div>
@@ -51,7 +51,7 @@ export default function ArtworkPage() {
         </div>
 
         {/* ILLUSTRATIONS */}
-        <div className='md:w-[50%] w-full flex flex-col md:h-[90vh] h-[100vh] overflow-y-auto'>
+        <div className='md:w-[50%] w-full flex flex-col md:h-[90vh] overflow-y-auto'>
           <div className='flex flex-col gap-4 overflow-y-auto relative pr-4'>
             {images.map((image, index) => (
               <img
