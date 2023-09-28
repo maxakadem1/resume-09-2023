@@ -37,14 +37,11 @@ export default function PacketvisPage() {
 
           <div className='flex flex-col gap-4 overflow-y-auto relative pr-4 md:h-full h-[40vh] md:w-full w-[90vw]'>
             <div className='text-gray-300 text-lg'>---</div>
-            <div className='text-gray-300 text-lg'>---</div>
-            <div className='text-gray-300 text-lg'>---</div>
-            <div className='text-gray-300 text-lg'>---</div>
           </div>
         </div>
 
         {/* ILLUSTRATIONS */}
-        <div className='md:w-[50%] w-full flex flex-col md:h-[90vh] h-[45vh] overflow-y-auto'>
+        <div className='md:w-[50%] w-full flex flex-col md:h-[90vh] h-[75vh] overflow-y-auto'>
           <div className='flex flex-col gap-4 overflow-y-auto relative pr-4'>
             {images.map((image, index) => (
               <img

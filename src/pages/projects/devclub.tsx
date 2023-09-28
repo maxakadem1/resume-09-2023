@@ -45,7 +45,7 @@ export default function DevclubPage() {
         </div>
 
         {/* ILLUSTRATIONS */}
-        <div className='md:w-[50%] w-full flex flex-col md:h-[90vh] h-[45vh] overflow-y-auto'>
+        <div className='md:w-[50%] w-full flex flex-col md:h-[90vh] h-[75vh] overflow-y-auto'>
           <div className='flex flex-col gap-4 overflow-y-auto relative pr-4'>
             {images.map((image, index) => (
               <img

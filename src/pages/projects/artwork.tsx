@@ -37,15 +37,21 @@ export default function ArtworkPage() {
           </div>
 
           <div className='flex flex-col gap-4 overflow-y-auto relative pr-4 md:h-full h-[40vh] md:w-full w-[90vw]'>
-            <div className='text-gray-300 text-lg'>---</div>
-            <div className='text-gray-300 text-lg'>---</div>
-            <div className='text-gray-300 text-lg'>---</div>
-            <div className='text-gray-300 text-lg'>---</div>
+            <div className='text-gray-300 text-lg'>
+              Here is the collection of my most recent work.
+            </div>
+            <div className='text-gray-300 text-lg'>
+              I usually work on my tablet and use procreate for digital art.
+            </div>
+            <div className='text-gray-300 text-lg'>
+              As you can already see, most of my inspiration comes from games
+              that I play in my spare time :)
+            </div>
           </div>
         </div>
 
         {/* ILLUSTRATIONS */}
-        <div className='md:w-[50%] w-full flex flex-col md:h-[90vh] h-[45vh] overflow-y-auto'>
+        <div className='md:w-[50%] w-full flex flex-col md:h-[90vh] h-[75vh] overflow-y-auto'>
           <div className='flex flex-col gap-4 overflow-y-auto relative pr-4'>
             {images.map((image, index) => (
               <img
