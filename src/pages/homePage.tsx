@@ -25,9 +25,12 @@ export default function HomePage() {
   const videos = { Rings, Blocks }
   const videoRef = useRef<HTMLVideoElement>(null)
   const [selectedVideo, setSelectedVideo] = useState<string>(videos.Blocks)
+  const [isLoading, setIsLoading] = useState(true)
+  const [videoLoaded, setVideoLoaded] = useState(false)
 
   const changeVideo = (videoPath: string) => {
     setSelectedVideo(videoPath)
+    setIsLoading(true)
     const videoElement = videoRef.current
     if (videoElement) {
       videoElement.load()
@@ -36,6 +39,16 @@ export default function HomePage() {
     console.log('changing video')
     console.log(videoPath)
   }
+
+  useEffect(() => {
+    const videoElement = videoRef.current
+    if (videoElement) {
+      const handleCanPlay = () => setIsLoading(false)
+      videoElement.addEventListener('canplaythrough', handleCanPlay)
+      return () =>
+        videoElement.removeEventListener('canplaythrough', handleCanPlay)
+    }
+  }, [selectedVideo])
 
   useEffect(() => {
     const videoElement = videoRef.current
@@ -176,9 +189,7 @@ export default function HomePage() {
           {/* FOOTER */}
           {showMenu && (
             <div className='w-full flex flex-col md:text-gray-700 text-gray-400 z-50'>
-              <div className=''>
-                Website made using NextJS/Typescipt/Tailwind
-              </div>
+              <div className=''>Website made using Next/Typescipt/Tailwind</div>
               <div className='lg:flex'>Animation made in Blender</div>
             </div>
           )}
@@ -186,18 +197,28 @@ export default function HomePage() {
       </div>
 
       {/* VIDEO */}
-      <div className='md:flex md:w-[80%] hidden md:flex-col md:items-center'>
-        <video
-          key={selectedVideo}
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className='w-full h-full object-cover'
-        >
-          <source src={selectedVideo} type='video/mp4' />
-        </video>
+      <div className='md:flex md:w-[80%] hidden md:flex-col md:items-center md:justify-center'>
+        {isLoading ? (
+          <div className='w-full text-gray-500 flex justify-center'>
+            {' '}
+            loading..
+          </div>
+        ) : (
+          <video
+            key={selectedVideo}
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            onLoadedData={() => setVideoLoaded(true)}
+            className={`w-full h-full object-cover ${
+              videoLoaded ? 'fade-in loaded' : 'fade-in'
+            }`}
+          >
+            <source src={selectedVideo} type='video/mp4' />
+          </video>
+        )}
       </div>
 
       {/* VIDEO MOBILE */}

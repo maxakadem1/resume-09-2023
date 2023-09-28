@@ -54,6 +54,15 @@ const ProjectsContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             <FiArrowUpRight className='ml-1' size={17} />
           </Link>
           <Link
+            href='/projects/packetvis'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit transform transition-transform duration-300 ease-in-out hover:translate-x-3'
+          >
+            <h1 className=''>PacketVis</h1>
+            <FiArrowUpRight className='ml-1' size={17} />
+          </Link>
+          <Link
             href='/projects/artwork'
             target='_blank'
             rel='noopener noreferrer'
