@@ -12,7 +12,7 @@ interface Props {
 const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
   return (
     <animated.div style={resumeProps}>
-      <div className='flex flex-col lg:h-[70vh] md:h-[70vh] h-[75vh]'>
+      <div className='flex flex-col lg:h-[65vh] md:h-[60vh] h-[75vh]'>
         <div className='pb-6'>
           <div className='text-xl font-semibold text-gray-300'>Experience</div>
           <button

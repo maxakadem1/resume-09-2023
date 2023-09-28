@@ -11,7 +11,7 @@ interface Props {
 const ContactMeContent: React.FC<Props> = ({ resumeProps, goBack }) => {
   return (
     <animated.div style={resumeProps}>
-      <div className='flex flex-col h-[75vh] '>
+      <div className='flex flex-col lg:h-[65vh] md:h-[60vh] h-[75vh]'>
         <div className='pb-6'>
           <div className='text-xl font-semibold text-gray-300'>Contacts</div>
           <button

@@ -13,13 +13,37 @@ import AboutMeContent from '@/components/AboutMeContent'
 import ContactMeContent from '@/components/ContactMeContent'
 // icons
 import { FiArrowUpRight } from 'react-icons/fi'
+import { BiSquareRounded } from 'react-icons/bi'
+import { BiSolidSquareRounded } from 'react-icons/bi'
+import { BiCircle } from 'react-icons/bi'
+import { BiSolidCircle } from 'react-icons/bi'
 
 export default function HomePage() {
   // ANIMATION IMPORT
   const Rings = '/glassDonuts.mp4'
   const Blocks = '/GlassBlocks2.mp4'
-
+  const videos = { Rings, Blocks }
   const videoRef = useRef<HTMLVideoElement>(null)
+  const [selectedVideo, setSelectedVideo] = useState<string>(videos.Blocks)
+
+  const changeVideo = (videoPath: string) => {
+    setSelectedVideo(videoPath)
+    const videoElement = videoRef.current
+    if (videoElement) {
+      videoElement.load()
+      videoElement.play()
+    }
+    console.log('changing video')
+    console.log(videoPath)
+  }
+
+  useEffect(() => {
+    const videoElement = videoRef.current
+    if (videoElement) {
+      videoElement.load()
+      videoElement.play()
+    }
+  }, [selectedVideo])
 
   // SMOOTH TRANSITIONS
   const [showMenu, setShowMenu] = useState(true)
@@ -57,8 +81,23 @@ export default function HomePage() {
           <div className='mb-8'>
             <div className='text-gray-300'>Maxim Abdulkhalikov</div>
             <div className='text-gray-600'>Personal Website</div>
-            <div className='text-gray-600'>
+            <div className='text-gray-600 pb-1'>
               Working in Tech and Design from 2022
+            </div>
+            {/* buttons to change the video */}
+            <div className='text-white flex flex-row gap-2 items-center'>
+              {selectedVideo === videos.Blocks ? (
+                <BiSolidSquareRounded
+                  onClick={() => changeVideo(videos.Rings)}
+                />
+              ) : (
+                <BiSquareRounded onClick={() => changeVideo(videos.Blocks)} />
+              )}
+              {selectedVideo === videos.Rings ? (
+                <BiSolidCircle onClick={() => changeVideo(videos.Blocks)} />
+              ) : (
+                <BiCircle onClick={() => changeVideo(videos.Rings)} />
+              )}
             </div>
           </div>
 
@@ -136,19 +175,20 @@ export default function HomePage() {
 
           {/* FOOTER */}
           {showMenu && (
-            <div className='w-full flex flex-col md:text-gray-700 text-white z-50'>
+            <div className='w-full flex flex-col md:text-gray-700 text-gray-400 z-50'>
               <div className=''>
                 Website made using NextJS/Typescipt/Tailwind
               </div>
-              <div className='lg:flex hidden'>Animation made in Blender</div>
+              <div className='lg:flex'>Animation made in Blender</div>
             </div>
           )}
         </div>
       </div>
 
       {/* VIDEO */}
-      <div className='md:flex md:w-[80%] hidden'>
+      <div className='md:flex md:w-[80%] hidden md:flex-col md:items-center'>
         <video
+          key={selectedVideo}
           ref={videoRef}
           autoPlay
           loop
@@ -156,13 +196,14 @@ export default function HomePage() {
           playsInline
           className='w-full h-full object-cover'
         >
-          <source src={Rings} type='video/mp4' />
+          <source src={selectedVideo} type='video/mp4' />
         </video>
       </div>
 
       {/* VIDEO MOBILE */}
       <div className='md:hidden absolute w-[200%] top-[35%] right-[-120%]'>
         <video
+          key={selectedVideo}
           ref={videoRef}
           autoPlay
           loop
@@ -170,7 +211,7 @@ export default function HomePage() {
           playsInline
           className='w-full h-full object-cover'
         >
-          <source src={Rings} type='video/mp4' />
+          <source src={selectedVideo} type='video/mp4' />
         </video>
       </div>
     </main>
