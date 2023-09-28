@@ -8,6 +8,8 @@ export default function Home() {
       <Head>
         <title>Your Website Title</title>
 
+        <link rel='icon' href='/favicon.ico' />
+
         {/* Basic meta tags */}
         <meta
           name='description'
