@@ -251,7 +251,10 @@ export default function HomePage() {
           loop
           muted
           playsInline
-          className='w-full h-full object-cover'
+          onLoadedData={() => setVideoLoaded(true)}
+          className={`w-full h-full object-cover ${
+            videoLoaded ? 'fade-in loaded' : 'fade-in'
+          }`}
         >
           <source src={selectedVideo} type='video/mp4' />
         </video>
