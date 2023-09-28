@@ -21,10 +21,9 @@ const ContactMeContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             Go Back
           </button>
         </div>
-
         <div className='flex flex-col gap-2 overflow-y-auto'>
           <Link
-            href='https://www.linkedin.com/in/abdulkhalikov/'
+            href='mailto:abdulhalikov0@gmail.com'
             target='_blank'
             rel='noopener noreferrer'
             className='flex flex-row items-center justify-center text-gray-500 hover:text-white w-fit transform transition-transform duration-300 ease-in-out hover:translate-x-3'
