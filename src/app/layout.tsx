@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Maxim A',
-  description: 'Personal Resume Website',
+  description: 'Personal Resume Website by Maxim Abdulkhalikov',
   openGraph: {
     images: '/Header.png',
   },

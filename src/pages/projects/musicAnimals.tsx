@@ -43,10 +43,18 @@ export default function MusicAnimalsPage() {
           </div>
 
           <div className='flex flex-col gap-4 overflow-y-auto relative pr-4 md:h-full  md:w-full w-[90vw]'>
-            <div className='text-gray-300 text-lg'>---</div>
-            <div className='text-gray-300 text-lg'>---</div>
-            <div className='text-gray-300 text-lg'>---</div>
-            <div className='text-gray-300 text-lg'>---</div>
+            <div className='text-gray-300 text-lg'>
+              Music Animals was developed as a project to assist students during
+              the making of the application for hosting songs.
+            </div>
+            <div className='text-gray-300 text-lg'>
+              Design takes inspiration from young generation, taking modern
+              agressive imagery and sharp contrast in color.
+            </div>
+            <div className='text-gray-300 text-lg'>
+              Design utilizes imagery of scorpions and orange/black/white color
+              pallete to accent the modern look targeted to young audience.
+            </div>
           </div>
         </div>
 

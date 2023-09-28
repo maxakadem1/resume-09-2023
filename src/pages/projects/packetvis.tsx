@@ -36,7 +36,17 @@ export default function PacketvisPage() {
           </div>
 
           <div className='flex flex-col gap-4 overflow-y-auto relative pr-4 md:h-full  md:w-full w-[90vw]'>
-            <div className='text-gray-300 text-lg'>---</div>
+            <div className='text-gray-300 text-lg'>
+              PacketVis was developed as a research project during my education
+              in University of Manitoba.
+            </div>
+            <div className='text-gray-300 text-lg'>
+              The application is used to get information from the application
+              called Wireshark that collects information on data packets sent
+              over the network. Our application takes that data and visualizes
+              it on a 3D map of the world, showcasing the data packets flying in
+              and out of the users IP address.
+            </div>
           </div>
         </div>
 
