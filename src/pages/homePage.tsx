@@ -16,7 +16,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 
 export default function HomePage() {
   // ANIMATION IMPORT
-  const Rings = '/Ring.mp4'
+  const Rings = '/glassDonuts.mp4'
   const Blocks = '/GlassBlocks2.mp4'
 
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -156,7 +156,7 @@ export default function HomePage() {
           playsInline
           className='w-full h-full object-cover'
         >
-          <source src={Blocks} type='video/mp4' />
+          <source src={Rings} type='video/mp4' />
         </video>
       </div>
 
@@ -170,10 +170,9 @@ export default function HomePage() {
           playsInline
           className='w-full h-full object-cover'
         >
-          <source src={Blocks} type='video/mp4' />
+          <source src={Rings} type='video/mp4' />
         </video>
       </div>
     </main>
   )
 }
-// bottom-[-250px] right-[-400px]

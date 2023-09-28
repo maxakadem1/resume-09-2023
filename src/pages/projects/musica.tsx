@@ -7,7 +7,7 @@ const MusicaPage = () => {
   return (
     <div className='h-screen flex flex-col'>
       <Head>
-        <title>Musica</title>
+        <title>Max A - Musica</title>
       </Head>
 
       <main className='flex h-screen w-scre en flex-row items-center justify-between gap-12 p-10 text-sm overflow-hidden bg-black'>

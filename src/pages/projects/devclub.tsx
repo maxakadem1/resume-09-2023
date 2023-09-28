@@ -6,7 +6,7 @@ export default function DevclubPage() {
   return (
     <div className='h-screen flex flex-col'>
       <Head>
-        <title>DevClub</title>
+        <title>Max A - DevClub</title>
       </Head>
 
       <main className='flex h-screen w-scre en flex-row items-center justify-between gap-12 p-10 text-sm overflow-hidden bg-black'>

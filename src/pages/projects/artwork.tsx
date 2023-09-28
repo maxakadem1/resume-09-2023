@@ -6,7 +6,7 @@ export default function ArtworkPage() {
   return (
     <div className='h-screen flex flex-col'>
       <Head>
-        <title>Artwork</title>
+        <title>Max A - Artwork</title>
       </Head>
 
       <main className='flex h-screen w-scre en flex-row items-center justify-between gap-12 p-10 text-sm overflow-hidden bg-black'>
