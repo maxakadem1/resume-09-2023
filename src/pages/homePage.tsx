@@ -22,8 +22,8 @@ import { TiPlus } from 'react-icons/ti'
 
 export default function HomePage() {
   // ANIMATION IMPORT
-  const Rings = '/glassDonuts.mp4'
-  const Blocks = '/GlassBlocks2.mp4'
+  const Rings = '/glassDonuts.webm'
+  const Blocks = '/GlassBlocks2.webm'
   const videos = { Rings, Blocks }
   const videoRef = useRef<HTMLVideoElement>(null)
   const [selectedVideo, setSelectedVideo] = useState<string>(videos.Blocks)
