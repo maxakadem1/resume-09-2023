@@ -7,6 +7,18 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Maxim A',
   description: 'Personal Resume Website',
+  openGraph: {
+    images: '/Header.png',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Max A - Potrfolio',
+    description: 'Portfolio of Maxim Abdulkhalikov',
+    siteId: '1467726470533754880',
+    creator: '@nextjs',
+    creatorId: '1467726470533754880',
+    images: ['/Header.png'],
+  },
 }
 
 export default function RootLayout({

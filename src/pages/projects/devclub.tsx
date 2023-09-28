@@ -2,6 +2,8 @@
 import Head from 'next/head'
 import '../../app/globals.css'
 import Link from 'next/link'
+// icons
+import { FiArrowUpRight } from 'react-icons/fi'
 
 export default function DevclubPage() {
   const images = [
@@ -37,10 +39,37 @@ export default function DevclubPage() {
           </div>
 
           <div className='flex flex-col gap-4 overflow-y-auto relative pr-4 md:h-full  md:w-full w-[90vw]'>
-            <div className='text-gray-300 text-lg'>---</div>
-            <div className='text-gray-300 text-lg'>---</div>
-            <div className='text-gray-300 text-lg'>---</div>
-            <div className='text-gray-300 text-lg'>---</div>
+            <div className='text-gray-300 text-lg'>
+              DevClub is the name of the programmers club in University of
+              Manitoba that I joined as an executive
+            </div>
+            <div className='text-gray-300 text-lg'>
+              As part of improving the club I, (Promotions Executive) and
+              another programmer and the club president at the time -{' '}
+              <Link
+                href='https://www.linkedin.com/in/manzik/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-blue-500 hover:text-blue-300'
+              >
+                Mohsen Yousefian
+                <FiArrowUpRight className='inline-block' />
+              </Link>{' '}
+              designed and developed a new and modern website for the club.
+            </div>
+            <div className='text-gray-300 text-lg'>
+              This website is currently used to showcase club activities and
+              award winners, you can check the original website{' '}
+              <Link
+                href='https://devclub.ca/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-blue-500 hover:text-blue-300'
+              >
+                here
+                <FiArrowUpRight className='inline-block' />
+              </Link>
+            </div>
           </div>
         </div>
 
