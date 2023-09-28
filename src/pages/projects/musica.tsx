@@ -40,7 +40,7 @@ const MusicaPage = () => {
             </Link>
           </div>
 
-          <div className='flex flex-col gap-4 overflow-y-auto relative pr-4 md:h-full h-[40vh] w-[90vw]'>
+          <div className='flex flex-col gap-4 overflow-y-auto relative pr-4 md:h-full h-[40vh] md:w-full w-[90vw]'>
             <div className='text-gray-300 text-lg'>
               Musica was created as a Freelance project to visualize the new,
               modern look for music appications.
@@ -63,7 +63,6 @@ const MusicaPage = () => {
 
         {/* ILLUSTRATIONS */}
         <div className='md:w-[60%] w-full flex flex-col md:h-[90vh] h-[45vh]'>
-          illus here (scrollable down)
           <div className='flex flex-col gap-4 overflow-y-auto relative pr-4'>
             {images.map((image) => (
               <img

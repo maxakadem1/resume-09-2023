@@ -17,6 +17,8 @@ import { BiSquareRounded } from 'react-icons/bi'
 import { BiSolidSquareRounded } from 'react-icons/bi'
 import { BiCircle } from 'react-icons/bi'
 import { BiSolidCircle } from 'react-icons/bi'
+import { TiPlusOutline } from 'react-icons/ti'
+import { TiPlus } from 'react-icons/ti'
 
 export default function HomePage() {
   // ANIMATION IMPORT
@@ -87,9 +89,9 @@ export default function HomePage() {
   }
 
   return (
-    <main className='flex h-screen flex-row items-center justify-between gap-12 md:p-10  text-sm overflow-hidden relative '>
+    <main className='flex h-screen flex-row items-center justify-between gap-12 md:p-10 text-sm overflow-hidden relative '>
       <div className='md:backdrop-blur-none backdrop-blur-md z-50 p-4 h-full w-full'>
-        <div className='flex flex-col h-full md:w-[100%] w-full justify-end '>
+        <div className='flex flex-col h-full md:w-[100%] w-full justify-end'>
           {/* HEADER */}
           <div className='mb-8'>
             <div className='text-gray-300'>Maxim Abdulkhalikov</div>
@@ -100,16 +102,26 @@ export default function HomePage() {
             {/* buttons to change the video */}
             <div className='text-white flex flex-row gap-2 items-center'>
               {selectedVideo === videos.Blocks ? (
-                <BiSolidSquareRounded
+                <TiPlus
+                  style={{ fontSize: '20px' }}
                   onClick={() => changeVideo(videos.Rings)}
                 />
               ) : (
-                <BiSquareRounded onClick={() => changeVideo(videos.Blocks)} />
+                <TiPlusOutline
+                  style={{ fontSize: '20px' }}
+                  onClick={() => changeVideo(videos.Blocks)}
+                />
               )}
               {selectedVideo === videos.Rings ? (
-                <BiSolidCircle onClick={() => changeVideo(videos.Blocks)} />
+                <BiSolidCircle
+                  style={{ fontSize: '15px' }}
+                  onClick={() => changeVideo(videos.Blocks)}
+                />
               ) : (
-                <BiCircle onClick={() => changeVideo(videos.Rings)} />
+                <BiCircle
+                  style={{ fontSize: '15px' }}
+                  onClick={() => changeVideo(videos.Rings)}
+                />
               )}
             </div>
           </div>

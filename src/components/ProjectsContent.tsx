@@ -25,9 +25,9 @@ const ProjectsContent: React.FC<Props> = ({ resumeProps, goBack }) => {
           </button>
         </div>
 
-        <div className='flex flex-col gap-2 overflow-y-auto'>
+        <div className='flex flex-col md:gap-2 gap-1 overflow-y-auto'>
           <div className='pb-3'>
-            <div className='text-gray-300 text-base pb-1'>Current</div>
+            <div className='text-gray-300 text-base md:pb-1'>Current</div>
             <div className='flex flex-col gap-1'>
               <Link
                 href='/projects/artwork'
@@ -42,7 +42,7 @@ const ProjectsContent: React.FC<Props> = ({ resumeProps, goBack }) => {
           </div>
 
           <div className='pb-3'>
-            <div className='text-gray-300 text-base pb-1'>2022</div>
+            <div className='text-gray-300 text-base md:pb-1'>2022</div>
             <div className='flex flex-col gap-1'>
               <Link
                 href='/projects/devclub'
@@ -66,7 +66,7 @@ const ProjectsContent: React.FC<Props> = ({ resumeProps, goBack }) => {
           </div>
 
           <div className='pb-3'>
-            <div className='text-gray-300 text-base pb-1'>2021</div>
+            <div className='text-gray-300 text-base md:pb-1'>2021</div>
             <div className='flex flex-col gap-1'>
               {' '}
               <Link
