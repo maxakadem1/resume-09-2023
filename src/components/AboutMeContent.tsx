@@ -28,7 +28,7 @@ const AboutMeContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             designer
           </div>
           <div className='text-gray-300'>
-            I was born in Kazahstan, but moved to Canada in 2018 to study
+            I was born in Kazakhstan, but moved to Canada in 2018 to study
             Computer Science in University of Manitoba.
           </div>
           <div className='text-gray-300'>

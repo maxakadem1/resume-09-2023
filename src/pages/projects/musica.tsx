@@ -23,7 +23,7 @@ const MusicaPage = () => {
       </Head>
 
       <main className='flex h-screen w-screen md:flex-row flex-col md:items-center items-start justify-between md:gap-12 gap-2 md:p-10 p-4 text-sm overflow-hidden bg-black'>
-        <div className='flex flex-col h-full w-[40%]'>
+        <div className='flex flex-col h-full w-[50%]'>
           {/* HEADER */}
           <div className='mb-8 md:flex hidden flex-col'>
             <div className='text-gray-300'>Maxim Abdulkhalikov</div>
@@ -62,13 +62,14 @@ const MusicaPage = () => {
         </div>
 
         {/* ILLUSTRATIONS */}
-        <div className='md:w-[60%] w-full flex flex-col md:h-[90vh] h-[45vh]'>
+        <div className='md:w-[50%] w-full flex flex-col md:h-[90vh] h-[45vh] overflow-y-auto'>
           <div className='flex flex-col gap-4 overflow-y-auto relative pr-4'>
-            {images.map((image) => (
+            {images.map((image, index) => (
               <img
+                key={index}
                 src={image}
                 alt=''
-                className='w-full h-full object-contain'
+                className='w-full object-contain mb-4'
               />
             ))}
           </div>
