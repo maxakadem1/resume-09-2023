@@ -33,13 +33,14 @@ export default function HomePage() {
   const changeVideo = (videoPath: string) => {
     setSelectedVideo(videoPath)
     setIsLoading(true)
+    setVideoLoaded(false)
     const videoElement = videoRef.current
     if (videoElement) {
       videoElement.load()
-      videoElement.play()
+      videoElement.play().catch((error) => {
+        console.error('Error playing video:', error)
+      })
     }
-    console.log('changing video')
-    console.log(videoPath)
   }
 
   useEffect(() => {
@@ -56,7 +57,18 @@ export default function HomePage() {
     const videoElement = videoRef.current
     if (videoElement) {
       videoElement.load()
-      videoElement.play()
+      videoElement
+        .play()
+        .then(() => {
+          console.log('Video playing')
+        })
+        .catch((error) => {
+          if (error.name === 'AbortError') {
+            console.log('Video play aborted')
+          } else {
+            console.error('Error playing video:', error)
+          }
+        })
     }
   }, [selectedVideo])
 
@@ -211,10 +223,7 @@ export default function HomePage() {
       {/* VIDEO */}
       <div className='md:flex md:w-[80%] hidden md:flex-col md:items-center md:justify-center'>
         {isLoading ? (
-          <div className='w-full text-gray-500 flex justify-center'>
-            {' '}
-            loading..
-          </div>
+          <div className='w-full text-gray-500 flex justify-center'> </div>
         ) : (
           <video
             key={selectedVideo}
