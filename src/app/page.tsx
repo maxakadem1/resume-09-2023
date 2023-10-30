@@ -1,41 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HomePage from '@/pages/homePage'
 import Head from 'next/head'
+import { initGA, logPageView } from '../../analytics'
+
+declare global {
+  interface Window {
+    GA_INITIALIZED?: boolean
+  }
+}
 
 export default function Home() {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && !window.GA_INITIALIZED) {
+      initGA()
+      window.GA_INITIALIZED = true
+    }
+    logPageView()
+  }, [])
+
   return (
     <>
-      <Head>
-        <title>Your Website Title</title>
-
-        <link rel='icon' href='/favicon.ico' />
-
-        {/* Basic meta tags */}
-        <meta
-          name='description'
-          content='Webiste portfolio of Maxim Abdulkhalikov'
-        />
-
-        {/* Open Graph meta tags */}
-        <meta property='og:title' content='Max A - Potrfolio' />
-        <meta
-          property='og:description'
-          content='Webiste portfolio of Maxim Abdulkhalikov'
-        />
-        <meta property='og:image' content='/Header.png' />
-        <meta property='og:url' content='maxworks.dev' />
-        <meta property='og:type' content='website' />
-
-        {/* Twitter specific meta tags (optional, but good to have) */}
-        <meta name='twitter:card' content='/Header.png' />
-        <meta name='twitter:title' content='Max A - Potrfolio' />
-        <meta
-          name='twitter:description'
-          content='Webiste portfolio of Maxim Abdulkhalikov'
-        />
-        <meta name='twitter:image' content='/Header.png' />
-      </Head>
-
       <HomePage />
     </>
   )
