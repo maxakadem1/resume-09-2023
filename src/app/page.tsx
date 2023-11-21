@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect } from 'react'
 import HomePage from '@/pages/homePage'
 import Head from 'next/head'
