@@ -28,9 +28,34 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
           <div>
             <div className='flex flex-row gap-2 items-center'>
               <div className='text-gray-300 pb-2 text-lg'>
+                Application Developer
+              </div>
+              <div className='text-gray-500 pb-2 text-sm'>(2024-current)</div>
+            </div>
+
+            <Link
+              href='https://www.pollardbanknote.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-gray-500 italic hover:text-white w-fit'
+            >
+              Pollard Banknote <FiArrowUpRight className='inline-block' />
+            </Link>
+            <div className='flex flex-col gap-3 text-gray-300 pt-2'>
+              <div>
+                • Used React, TypeScript, and AWS to develop and maintain web
+                games for international clients.
+              </div>
+            </div>
+          </div>
+
+          {/* E2 */}
+          <div>
+            <div className='flex flex-row gap-2 items-center'>
+              <div className='text-gray-300 pb-2 text-lg'>
                 React Software Developer
               </div>
-              <div className='text-gray-500 pb-2 text-sm'>(2023-current)</div>
+              <div className='text-gray-500 pb-2 text-sm'>(2023)</div>
             </div>
 
             <Link
@@ -72,7 +97,7 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             </div>
           </div>
 
-          {/* E2 */}
+          {/* E3 */}
           <div>
             <div className='flex flex-row gap-2 items-center'>
               <div className='text-gray-300 pb-2 text-lg'>
@@ -101,7 +126,7 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             </div>
           </div>
 
-          {/* E3 */}
+          {/* E4 */}
           <div>
             <div className='flex flex-row gap-2 items-center'>
               <div className='text-gray-300 pb-2 text-lg'>UI/UX Designer</div>
