@@ -46,8 +46,8 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
                 • Worked on full stack Next and React Native applications to
                 deliver a beautiful and functional user interfaces.
               </div>
-              <div>• Led UI development</div>
-              <div>• Created custom front-end library architectures</div>
+              <div>• Led UI development.</div>
+              <div>• Created custom front-end library architectures.</div>
               <div>
                 • Oversaw development as part of UI enabling team highly
                 specialized in complex front end systems.
