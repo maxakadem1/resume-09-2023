@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react'
-import { animated, useSpring, useTrail, config } from '@react-spring/web'
-import Link from 'next/link'
+import { useState, useEffect } from "react"
+import { animated, useSpring, useTrail, config } from "@react-spring/web"
+import Link from "next/link"
 // icons
-import { FiArrowUpRight } from 'react-icons/fi'
+import { FiArrowUpRight } from "react-icons/fi"
 
 interface Props {
   resumeProps: any
@@ -12,61 +12,67 @@ interface Props {
 const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
   return (
     <animated.div style={resumeProps}>
-      <div className='flex flex-col lg:h-[65vh] md:h-[60vh] h-[75vh]'>
-        <div className='pb-6'>
-          <div className='text-xl font-semibold text-gray-300'>Experience</div>
+      <div className="flex flex-col lg:h-[65vh] md:h-[60vh] h-[75vh]">
+        <div className="pb-6">
+          <div className="text-xl font-semibold text-gray-300">Experience</div>
           <button
             onClick={goBack}
-            className='text-gray-500 hover:text-white w-fit'
+            className="text-gray-500 hover:text-white w-fit"
           >
             Go Back
           </button>
         </div>
 
-        <div className='flex flex-col gap-20 overflow-y-auto p-4 relative'>
+        <div className="flex flex-col gap-20 overflow-y-auto p-4 relative">
           {/* E1 */}
           <div>
-            <div className='flex flex-row gap-2 items-center'>
-              <div className='text-gray-300 pb-2 text-lg'>
-                Application Developer
+            <div className="flex flex-row gap-2 items-center">
+              <div className="text-gray-300 pb-2 text-lg">
+                Application Developer - UI/UX Innovation Team
               </div>
-              <div className='text-gray-500 pb-2 text-sm'>(2024-current)</div>
+              <div className="text-gray-500 pb-2 text-sm">(2024-current)</div>
             </div>
 
             <Link
-              href='https://www.pollardbanknote.com/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-gray-500 italic hover:text-white w-fit'
+              href="https://www.pollardbanknote.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 italic hover:text-white w-fit"
             >
-              Pollard Banknote <FiArrowUpRight className='inline-block' />
+              Pollard Banknote <FiArrowUpRight className="inline-block" />
             </Link>
-            <div className='flex flex-col gap-3 text-gray-300 pt-2'>
+            <div className="flex flex-col gap-3 text-gray-300 pt-2">
               <div>
-                • Used React, TypeScript, and AWS to develop and maintain web
-                games for international clients.
+                • Worked on full stack Next and React Native applications to
+                deliver a beautiful and functional user interfaces.
+              </div>
+              <div>• Led UI development</div>
+              <div>• Created custom front-end library architectures</div>
+              <div>
+                • Oversaw development as part of UI enabling team highly
+                specialized in complex front end systems.
               </div>
             </div>
           </div>
 
           {/* E2 */}
           <div>
-            <div className='flex flex-row gap-2 items-center'>
-              <div className='text-gray-300 pb-2 text-lg'>
+            <div className="flex flex-row gap-2 items-center">
+              <div className="text-gray-300 pb-2 text-lg">
                 React Software Developer
               </div>
-              <div className='text-gray-500 pb-2 text-sm'>(2023)</div>
+              <div className="text-gray-500 pb-2 text-sm">(2023)</div>
             </div>
 
             <Link
-              href='https://outreachgenius.ai/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-gray-500 italic hover:text-white w-fit'
+              href="https://outreachgenius.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 italic hover:text-white w-fit"
             >
-              ACE Marketing <FiArrowUpRight className='inline-block' />
+              ACE Marketing <FiArrowUpRight className="inline-block" />
             </Link>
-            <div className='flex flex-col gap-3 text-gray-300 pt-2'>
+            <div className="flex flex-col gap-3 text-gray-300 pt-2">
               <div>
                 • Led the design process for all components, pages, and
                 interactions on all the company's websites, ensuring that
@@ -99,21 +105,21 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
 
           {/* E3 */}
           <div>
-            <div className='flex flex-row gap-2 items-center'>
-              <div className='text-gray-300 pb-2 text-lg'>
+            <div className="flex flex-row gap-2 items-center">
+              <div className="text-gray-300 pb-2 text-lg">
                 Full Stack React Developer (Co-op Alternative)
               </div>
-              <div className='text-gray-500 pb-2 text-sm'>(2022)</div>
+              <div className="text-gray-500 pb-2 text-sm">(2022)</div>
             </div>
             <Link
-              href='https://github.com/University-of-Manitoba-Computer-Science/trackr'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-gray-500 italic hover:text-white w-fit'
+              href="https://github.com/University-of-Manitoba-Computer-Science/trackr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 italic hover:text-white w-fit"
             >
-              University of Manitoba <FiArrowUpRight className='inline-block' />
+              University of Manitoba <FiArrowUpRight className="inline-block" />
             </Link>
-            <div className='flex flex-col gap-3 text-gray-300 pt-2'>
+            <div className="flex flex-col gap-3 text-gray-300 pt-2">
               <div>
                 • Working on open-source, university owned proprietary
                 technology for data visualization using React, MaterialUI and
@@ -128,14 +134,14 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
 
           {/* E4 */}
           <div>
-            <div className='flex flex-row gap-2 items-center'>
-              <div className='text-gray-300 pb-2 text-lg'>UI/UX Designer</div>
-              <div className='text-gray-500 pb-2 text-sm'>(2022)</div>
+            <div className="flex flex-row gap-2 items-center">
+              <div className="text-gray-300 pb-2 text-lg">UI/UX Designer</div>
+              <div className="text-gray-500 pb-2 text-sm">(2022)</div>
             </div>
-            <div className='text-gray-500 italic w-fit'>
-              Freelance (Self employed) - See Projects from the Homepage{' '}
+            <div className="text-gray-500 italic w-fit">
+              Freelance (Self employed) - See Projects from the Homepage{" "}
             </div>
-            <div className='flex flex-col gap-3 text-gray-300 pt-2'>
+            <div className="flex flex-col gap-3 text-gray-300 pt-2">
               <div>
                 • Created personalized illustrations for over 20+ clients.
                 Created music album covers, personalized gifts and other client
