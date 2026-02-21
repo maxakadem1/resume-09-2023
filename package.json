@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@react-spring/web": "^9.7.3",
-    "next": "latest",
+    "next": "16.1.6",
     "react": "latest",
     "react-dom": "latest",
     "react-ga": "^3.3.1",
