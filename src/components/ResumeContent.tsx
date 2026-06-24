@@ -1,7 +1,10 @@
 import { animated } from '@react-spring/web'
+import type { ComponentProps } from 'react'
+
+type AnimatedDivStyle = ComponentProps<typeof animated.div>['style']
 
 interface Props {
-  resumeProps: any
+  resumeProps: AnimatedDivStyle
   goBack: () => void
 }
 

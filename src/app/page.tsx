@@ -1,8 +1,7 @@
 'use client'
 
 import React, { useEffect } from 'react'
-import HomePage from '@/pages/homePage'
-import Head from 'next/head'
+import HomePage from '@/components/HomePage'
 import { initGA, logPageView } from '../../analytics'
 
 declare global {
