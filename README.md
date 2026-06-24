@@ -1,5 +1,8 @@
 # Maxim Abdulkhalikov Portfolio
 
+<img width="1392" height="1215" alt="image" src="https://github.com/user-attachments/assets/8237fb82-efa9-4c0d-9d87-db71a9c031e4" />
+
+
 A personal portfolio and resume website for Maxim Abdulkhalikov. The app
 showcases professional experience, project case studies, artwork, contact links,
 and an embedded resume PDF.
