@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react'
-import { animated, useSpring, useTrail, config } from '@react-spring/web'
+import { animated } from '@react-spring/web'
 import Link from 'next/link'
+import type { ComponentProps } from 'react'
 // icons
 import { FiArrowUpRight } from 'react-icons/fi'
 
+type AnimatedDivStyle = ComponentProps<typeof animated.div>['style']
+
 interface Props {
-  resumeProps: any
+  resumeProps: AnimatedDivStyle
   goBack: () => void
 }
 

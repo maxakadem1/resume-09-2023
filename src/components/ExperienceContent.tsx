@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react"
-import { animated, useSpring, useTrail, config } from "@react-spring/web"
+import { animated } from "@react-spring/web"
 import Link from "next/link"
+import type { ComponentProps } from "react"
 // icons
 import { FiArrowUpRight } from "react-icons/fi"
 
+type AnimatedDivStyle = ComponentProps<typeof animated.div>["style"]
+
 interface Props {
-  resumeProps: any
+  resumeProps: AnimatedDivStyle
   goBack: () => void
 }
 
@@ -28,9 +30,11 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
           <div>
             <div className="flex flex-row gap-2 items-center">
               <div className="text-gray-300 pb-2 text-lg">
-                Application Developer - UI/UX Innovation Team
+                Software Developer - Core Product Team
               </div>
-              <div className="text-gray-500 pb-2 text-sm">(2024-current)</div>
+              <div className="text-gray-500 pb-2 text-sm">
+                (Mar 2024 - Present)
+              </div>
             </div>
 
             <Link
@@ -39,18 +43,62 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
               rel="noopener noreferrer"
               className="text-gray-500 italic hover:text-white w-fit"
             >
-              Pollard Banknote <FiArrowUpRight className="inline-block" />
+              Pollard Banknote, Winnipeg, MB{" "}
+              <FiArrowUpRight className="inline-block" />
             </Link>
             <div className="flex flex-col gap-3 text-gray-300 pt-2">
               <div>
-                • Worked on full stack Next and React Native applications to
-                deliver a beautiful and functional user interfaces.
+                - Created and currently maintain department-wide front-end
+                architecture used across 8+ client teams and approximately 50
+                developers, establishing reusable patterns and technical
+                standards for Next.js applications, shared libraries, and
+                widget-based integrations.
               </div>
-              <div>• Led UI development.</div>
-              <div>• Created custom front-end library architectures.</div>
               <div>
-                • Oversaw development as part of UI enabling team highly
-                specialized in complex front end systems.
+                - Architected and expanded a shared front-end platform
+                comprising 30+ reusable React components and 20+ production
+                widgets, personally implementing approximately half of the
+                component library and one-third of the widget catalog.
+              </div>
+              <div>
+                - Serve as a daily point of assistance for approximately 15
+                developers across rotating client teams, reviewing architectural
+                proposals and resolving complex React, Next.js, accessibility,
+                shared-library, CI/CD, package-upgrade, and client-integration
+                challenges.
+              </div>
+              <div>
+                - Led the technical delivery of Arizona&apos;s first client
+                implementation across a team of approximately eight developers,
+                breaking requirements into workstreams, assigning technical
+                ownership, reviewing implementation decisions, and unblocking
+                delivery under a tight production deadline.
+              </div>
+              <div>
+                - Guided a full application migration to Next.js and
+                Pollard&apos;s shared widget architecture, applying patterns
+                developed by the Core Product Team and enabling the client team
+                to independently maintain and extend the production application
+                after launch.
+              </div>
+              <div>
+                - Built an internal development platform for reusable widgets
+                and components, including local sandboxes, hot reloading,
+                Storybook documentation, mock APIs, test harnesses, templates,
+                automated testing, and build, versioning, packaging, and
+                publishing workflows.
+              </div>
+              <div>
+                - Built core front-end capabilities for Konsole, an internal
+                platform used by business teams to manage games, polls, surveys,
+                and other client content, implementing API integrations,
+                role-based permissions, complex forms, and validation workflows.
+              </div>
+              <div>
+                - Scaled front-end knowledge across client teams by mentoring
+                co-op through senior-level developers, leading onboarding and
+                knowledge-sharing sessions, and documenting core architecture,
+                development workflows, and integration patterns.
               </div>
             </div>
           </div>
@@ -74,31 +122,25 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             </Link>
             <div className="flex flex-col gap-3 text-gray-300 pt-2">
               <div>
-                • Led the design process for all components, pages, and
-                interactions on all the company's websites, ensuring that
-                everything adhered to a consistent and intuitive user
-                experience.
+                - Led the design process for all components, pages, and
+                interactions on company websites, keeping the experience
+                consistent and intuitive.
               </div>
               <div>
-                • Chose the best technologies suitable for the websites'
-                frontend development and used them to implement components and
-                pages, enhancing overall functionality and responsiveness.
+                - Chose frontend technologies and used them to implement
+                responsive components and pages.
               </div>
               <div>
-                • Successfully transformed and refactored a legacy Vue codebase
-                into a modern, maintainable, and performant React TypeScript
-                codebase for a Chrome extension.
+                - Refactored a legacy Vue codebase into a modern React
+                TypeScript codebase for a Chrome extension.
               </div>
               <div>
-                • Implemented Material-UI library to enhance the design and
-                styling of the Chrome extension, creating a visually appealing
-                and user-friendly interface.
+                - Implemented Material UI to improve the Chrome extension
+                design, styling, and usability.
               </div>
               <div>
-                • Proactively researched and implemented optimizations, such as
-                performance enhancements and code refactoring, resulting in
-                improved loading times and enhanced user experience for the
-                Chrome extension.
+                - Researched and implemented optimizations, including
+                performance improvements and code refactoring.
               </div>
             </div>
           </div>
@@ -121,13 +163,12 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             </Link>
             <div className="flex flex-col gap-3 text-gray-300 pt-2">
               <div>
-                • Working on open-source, university owned proprietary
-                technology for data visualization using React, MaterialUI and
-                SQL.
+                - Worked on university-owned technology for data visualization
+                using React, Material UI, and SQL.
               </div>
               <div>
-                • Technology is used for data visualization on devices such as
-                Raspberry Pis and Arduinos.
+                - The technology is used for data visualization on devices such
+                as Raspberry Pis and Arduinos.
               </div>
             </div>
           </div>
@@ -143,12 +184,12 @@ const ExperienceContent: React.FC<Props> = ({ resumeProps, goBack }) => {
             </div>
             <div className="flex flex-col gap-3 text-gray-300 pt-2">
               <div>
-                • Created personalized illustrations for over 20+ clients.
-                Created music album covers, personalized gifts and other client
+                - Created personalized illustrations for over 20 clients,
+                including album covers, personalized gifts, and other client
                 work.
               </div>
               <div>
-                • Developed personalized style for each illustration depending
+                - Developed personalized styles for each illustration depending
                 on client needs.
               </div>
             </div>

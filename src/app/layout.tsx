@@ -5,6 +5,9 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
+  ),
   title: 'Maxim A',
   description: 'Personal Resume Website by Maxim Abdulkhalikov',
   openGraph: {
@@ -12,11 +15,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Max A - Potrfolio',
+    title: 'Max A - Portfolio',
     description: 'Portfolio of Maxim Abdulkhalikov',
-    siteId: '1467726470533754880',
-    creator: '@nextjs',
-    creatorId: '1467726470533754880',
+    creator: '@maxakadem1',
     images: ['/Header.png'],
   },
 }
